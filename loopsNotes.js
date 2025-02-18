@@ -139,12 +139,12 @@ Continue is like a "lighter" version of break. Instead of ejecting you
 out of the loop it just skips to the end of the current iteraction. */
 //Example: print just the odd numbers from 1 to 20:
 
-for (let i = 0; i < 21; i++) {
-    if( i % 2 == 0){
-        continue;
-    }
-    console.log(i);
-}
+// for (let i = 0; i < 21; i++) {
+//     if( i % 2 == 0){
+//         continue;
+//     }
+//     console.log(i);
+// }
 
 
 
@@ -159,4 +159,57 @@ for (let i = 0; i < 21; i++) {
 
 
 
+/* ARRAYS
+In programming, an array is a collection of values. Specifically, it's an 
+"ordered" collection of values.
 
+let arrayName = [item1, item2, item3, item4];
+
+tomake an empty array, there are two approaches:
+let fakeArray1 = new Array();
+let fakeArray2 = [];
+*/
+
+let fruits = ["Apples", "Bananas", "Orange", "Lemon", "Lychees"];
+console.log(fruits);
+
+console.log(fruits[3]); // "Lemon", b/c we start indexing from 0.
+
+fruits[3] = "Pineapple";
+console.log(fruits);
+
+// add strawberries
+fruits[5] = "strawberries";
+console.log(fruits);
+
+// find out how long an array is (how many elements are in it?).
+console.log(fruits.length);
+
+fruits[fruits.length] = "blueberry";
+console.log(fruits);
+
+/* an array can store elements of any type. Including, mixing types
+in the same array*/
+
+let exampleArray2 = ["Apple", 35, true, function() {console.log(`hello`);}, "array"];
+
+console.log(exampleArray2[0]);
+console.log(exampleArray2[1]);
+console.log(exampleArray2[3]);
+
+/* do math or other oporations with the values in an array */
+// function to calculate the diastance between 2 points on the x-y plane.
+// distance = sqrt((x2 - x1)^2 + (y2 - y1)^2)
+let obj1 = [3,5];
+let obj2 = [7,11];
+
+let dist = Math.sqrt((obj2[0] - obj1[0])**2 + (obj2[1]- obj1[1])**2);
+console.log(dist);
+
+
+let primes =[2, 3, 5, 7, 9, 11, 13, 17];
+let i = 0;
+while (i < primes.length){
+    console.log(primes[i]);
+    i++;
+}
