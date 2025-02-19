@@ -170,41 +170,41 @@ let fakeArray1 = new Array();
 let fakeArray2 = [];
 */
 
-let fruits = ["Apples", "Bananas", "Orange", "Lemon", "Lychees"];
-console.log(fruits);
+// let fruits = ["Apples", "Bananas", "Orange", "Lemon", "Lychees"];
+// console.log(fruits);
 
-console.log(fruits[3]); // "Lemon", b/c we start indexing from 0.
+// console.log(fruits[3]); // "Lemon", b/c we start indexing from 0.
 
-fruits[3] = "Pineapple";
-console.log(fruits);
+// fruits[3] = "Pineapple";
+// console.log(fruits);
 
-// add strawberries
-fruits[5] = "strawberries";
-console.log(fruits);
+// // add strawberries
+// fruits[5] = "strawberries";
+// console.log(fruits);
 
-// find out how long an array is (how many elements are in it?).
-console.log(fruits.length);
+// // find out how long an array is (how many elements are in it?).
+// console.log(fruits.length);
 
-fruits[fruits.length] = "blueberry";
-console.log(fruits);
+// fruits[fruits.length] = "blueberry";
+// console.log(fruits);
 
 /* an array can store elements of any type. Including, mixing types
 in the same array*/
 
-let exampleArray2 = ["Apple", 35, true, function() {console.log(`hello`);}, "array"];
+// let exampleArray2 = ["Apple", 35, true, function() {console.log(`hello`);}, "array"];
 
-console.log(exampleArray2[0]);
-console.log(exampleArray2[1]);
-console.log(exampleArray2[3]);
+// console.log(exampleArray2[0]);
+// console.log(exampleArray2[1]);
+// console.log(exampleArray2[3]);
 
 /* do math or other oporations with the values in an array */
 // function to calculate the diastance between 2 points on the x-y plane.
 // distance = sqrt((x2 - x1)^2 + (y2 - y1)^2)
-let obj1 = [3,5];
-let obj2 = [7,11];
+// let obj1 = [3,5];
+// let obj2 = [7,11];
 
-let dist = Math.sqrt((obj2[0] - obj1[0])**2 + (obj2[1]- obj1[1])**2);
-console.log(dist);
+// let dist = Math.sqrt((obj2[0] - obj1[0])**2 + (obj2[1]- obj1[1])**2);
+// console.log(dist);
 
 
 let primes =[2, 3, 5, 7, 9, 11, 13, 17];
@@ -212,4 +212,64 @@ let i = 0;
 while (i < primes.length){
     console.log(primes[i]);
     i++;
+}
+
+console.log(primes.at(-1));
+
+// Array methods
+// .pop() - finds the last element of the array and returns it, and deletes it 
+// from the array.
+console.log(primes);
+console.log(primes.pop());
+console.log(primes);
+
+//Here is a code snippet to find the sum of all primes
+//less than 20. 
+// let sum = 0;
+// while (primes.length) {
+//     sum += primes.pop();
+//     console.log(primes, sum);
+// }
+
+// console.log(sum)
+
+// The inverse of .pop() is .push()
+// .push() adds an element to the end of the array.
+
+let fruits = ["apple", "lemon", "banana"];
+
+console.log(fruits);
+
+fruits.push("watermelon");
+
+console.log(fruits);
+
+// The problem with pop and push, is that you can only modify the end of the array.
+// If you want to modify the BEGINING of the array, you need different methods:
+
+console.log(fruits.shift());
+console.log(fruits);
+
+// unshift() - unshift is push but at the begining
+fruits.unshift("pineapple");
+console.log(fruits);
+
+// push and upshift can add multiple elements at once
+fruits.push("orange", "peach");
+fruits.unshift("kiwi", "grape");
+
+console.log(fruits);
+
+// using loops with arrays.
+// here's an "old" style of printing all od the array values.
+
+for (let i = 0; i < fruits.length; i++){
+    console.log(fruits[i]);
+}
+
+//there is a different kind of way to do this , using a 
+// for ...of loop:
+
+for (let fruit of fruits) {
+    console.log(fruits);
 }
