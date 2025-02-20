@@ -207,21 +207,21 @@ in the same array*/
 // console.log(dist);
 
 
-let primes =[2, 3, 5, 7, 9, 11, 13, 17];
-let i = 0;
-while (i < primes.length){
-    console.log(primes[i]);
-    i++;
-}
+// let primes =[2, 3, 5, 7, 9, 11, 13, 17];
+// let i = 0;
+// while (i < primes.length){
+//     console.log(primes[i]);
+//     i++;
+// }
 
-console.log(primes.at(-1));
+// console.log(primes.at(-1));
 
 // Array methods
 // .pop() - finds the last element of the array and returns it, and deletes it 
 // from the array.
-console.log(primes);
-console.log(primes.pop());
-console.log(primes);
+// console.log(primes);
+// console.log(primes.pop());
+// console.log(primes);
 
 //Here is a code snippet to find the sum of all primes
 //less than 20. 
@@ -236,40 +236,74 @@ console.log(primes);
 // The inverse of .pop() is .push()
 // .push() adds an element to the end of the array.
 
-let fruits = ["apple", "lemon", "banana"];
+// let fruits = ["apple", "lemon", "banana"];
 
-console.log(fruits);
+// console.log(fruits);
 
-fruits.push("watermelon");
+// fruits.push("watermelon");
 
-console.log(fruits);
+// console.log(fruits);
 
 // The problem with pop and push, is that you can only modify the end of the array.
 // If you want to modify the BEGINING of the array, you need different methods:
 
-console.log(fruits.shift());
-console.log(fruits);
+// console.log(fruits.shift());
+// console.log(fruits);
 
-// unshift() - unshift is push but at the begining
-fruits.unshift("pineapple");
-console.log(fruits);
+// // unshift() - unshift is push but at the begining
+// fruits.unshift("pineapple");
+// console.log(fruits);
 
-// push and upshift can add multiple elements at once
-fruits.push("orange", "peach");
-fruits.unshift("kiwi", "grape");
+// // push and upshift can add multiple elements at once
+// fruits.push("orange", "peach");
+// fruits.unshift("kiwi", "grape");
 
-console.log(fruits);
+// console.log(fruits);
 
 // using loops with arrays.
 // here's an "old" style of printing all od the array values.
 
-for (let i = 0; i < fruits.length; i++){
-    console.log(fruits[i]);
-}
+// for (let i = 0; i < fruits.length; i++){
+//     console.log(fruits[i]);
+// }
 
 //there is a different kind of way to do this , using a 
 // for ...of loop:
 
-for (let fruit of fruits) {
-    console.log(fruits);
-}
+// for (let fruit of fruits) {
+//     console.log(fruits);
+// }
+
+/* omething to note about arrays.
+array.length is returning the alue of the last index + 1, it is not actually
+counting the number of values in the array*/
+
+// let grades = ["A", "A", "B", , "B", "A"];
+// console.log(grades);
+// console.log(grades.length);
+
+// let badArray = [];
+// badArray[314] = "pie";
+// console.log(badArray.length);
+// console.log(badArray);
+
+/* Multidimentional Arrays
+A Multidimentional Array, is a array that is, in turn,
+made up of more arrays.
+*/
+
+
+// an array holding XY coordinates of 5 points:
+// 3,4 and 1,2 and 9,15 and 37,11 and 215,1
+let coordinates = [
+    [3,4],
+    [1,2],
+    [9,15],
+    [37,11],
+    [215,1]
+]
+console.log(coordinates[4][0]);
+
+coordinates[4][0] = 21;
+
+console.log(coordinates);
