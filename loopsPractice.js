@@ -1,4 +1,6 @@
-// This is the first task
+// This is the first problem
+
+
 for (let i = 0; i < 23; i++) {
          if( i % 2 == 0){
              continue;
@@ -7,7 +9,7 @@ for (let i = 0; i < 23; i++) {
         }
 
 
-//This is the second task
+//This is the second problem
 
 let i = 0
 while (i < 3){
@@ -15,6 +17,6 @@ while (i < 3){
     i++;
 }
 
-    //     for (let i = 0; i < 3; i++) { 
-    //         alert( `number ${i}!` ); 
-    // }
+//This is the third problem
+prompt("Please type in a number greater than 100");
+console.log()
