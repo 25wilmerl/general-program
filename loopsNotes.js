@@ -307,3 +307,98 @@ console.log(coordinates[4][0]);
 coordinates[4][0] = 21;
 
 console.log(coordinates);
+
+
+/*methods are funtions tied to a dataType.
+
+e.g. arr.pop() is the pop method, whih removes the last time of the array
+
+-We've learned 4 array methods: pop, push, shift and unshift
+- arr.length is not tehnically a method, sine it doesn't carry the ()
+-arr.at() which works like the [] notation, but allows you to use negative indices
+ex: arr = [a,b,c,d,e,f,g] => arr.at(-2) => "f"
+
+New Methods:
+.join() allows you to combine the terms of an array into a string,
+and you can specify the seporator
+*/
+
+//Example:
+// let arrayForString =["A", "B", "C", "D"];
+// console.log(arrayForString.join()); // This aoutput a single string connected by commas;
+
+// console.log(arrayForString.join(" o.0 "));
+
+/* More metods:
+.concat() => concatenate, ombine arrays
+*/
+
+let mikesSons = ["Greg", "Peter", "Bobby"];
+carolsDuaghters = ["Marica", "Jan", "Cindy"];
+
+/* final 2 methods for now:
+-.splice() and .slice()
+
+.splice() adds new items to an array
+.slice() removes a piece of an array
+*/
+
+let fruits = ["Apple", "Orange", "Banana", "Kiwi"];
+fruits.splice(2,0, "Mango", "Papaya");
+console.log(fruits);
+// //.splice(targetIndex, howManyItemsemovedAfterInserted, stuffToBeAdded...)
+
+// //You can actually use splice to delete items from the middle of an array.
+// fruits.splice(3,1);
+// console.log(fruits);
+
+// .slice returns a new array from a subsection (or slice) of an original array.
+let fruitsILike = fruits.slice(1,5);
+console.log(fruitsILike);
+
+/* Strings actually behave like an array and hvae similar methids.
+string.length => length of the string
+*/
+
+let alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+console.log(alpha.charAt(2));
+console.log(alpha.at(7)); // At allows negative indiies, while charAt does not.
+console.log(alpha[12]);
+
+/* 
+At() - allows negative indicies
+IF you put in a value that doesn't exist, like:
+alpha[28] => undfifned
+alpha. charAt => ""
+
+ALSO: observe this example:*/
+
+// alpha[1] = "Q";
+// console.log(alpha); // [] are "read-only".
+
+/* 3 methods to remove a part of a string:
+.slice(start, end)
+.substring(start, end)   //values less than 0 are treated as 0 
+^ for both of these, if yu omit the end value, it goes to the end of the string^
+.substr(start, length)*/
+
+
+let testString = "The quick brown fox jumped over the lazy dog"
+
+let string1 = testString.slice(-5, -1);
+let string2 = testString.substring(-5, -1);
+let string3 = testString.substr(3,10);
+
+console.log(string1);
+console.log(string2);
+console.log(string3);
+
+/* two final string methods:
+.toUpperCase() = makes the string all upper case
+.toLowerCase() = makes the string all lower case */
+
+let testString2 = "ThE QuIcK Brown FOX jumPED OveR ThE LAZy Dog";
+
+console.log(testString2.toUpperCase());
+console.log(testString2.toLowerCase());

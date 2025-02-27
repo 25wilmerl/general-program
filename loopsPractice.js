@@ -17,12 +17,10 @@
 //     i++;
 // }
 
-//This is the third problem
+//This is the third problem;
 input = 0;
 while(input <= 100){
     input = prompt("Please type in a number greater than 100");
 }
 
 //This is the fourth problem
-
-function sumInput()
