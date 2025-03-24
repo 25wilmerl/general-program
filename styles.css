@@ -29,3 +29,38 @@ div {
 .sad {
     font-size: xx-small;
 }
+
+.royal {
+    font-style: italic;
+}
+
+.Kent {
+    color: blue;
+}
+
+.Gloucester {
+    color: goldenrod;
+}
+
+.Edmund {
+    color: darkgreen;
+}
+
+.King-Lear {
+    color: red;
+    font-style: italic;
+}
+
+#annoyed {
+    font-size: x-large;
+}
+
+#TopOfPage {
+    font-weight: 900;
+    font-style: oblique;
+}
+/* As a rule, you want to avoid id selectors.
+ID selectors can only be used once per page, and each
+element can only have on ID. In general, you want to use class
+selectors, because they can be repeated, and you can assign more 
+than one to a single element*/
